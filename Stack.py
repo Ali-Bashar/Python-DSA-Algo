@@ -36,9 +36,15 @@ class Stack:
             return data
 
 
-s = Stack()
-s.push(5)
-s.push(6)
-s.push(7)
-s.push(8)
-print(s.pop())
+    def travers(self):
+        if(self.is_empty()):
+            return "Stack Empty"
+        
+        temp = self.top
+
+        while temp != None:
+            print(temp.data)
+            temp = temp.next
+
+
+
