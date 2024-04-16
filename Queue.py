@@ -16,7 +16,7 @@ class Queue:
             self.front = new_node
             self.rear = self.front
         else:
-            self.front.next = new_node
+            self.rear.next = new_node
             self.rear = new_node
 
     def dequeue(self):
@@ -42,6 +42,21 @@ class Queue:
         while temp != None:
             print(temp.data,end=" ")
             temp = temp.next
+
+    def size(self):
+        if self.front == None:
+            return "Empty Queue"
+
+        count = 0
+        temp = self.front
+        
+
+        while temp != None:
+            temp = temp.next
+            count += 1
+
+        return count
+
 
 
 
