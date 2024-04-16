@@ -47,4 +47,8 @@ class Stack:
             temp = temp.next
 
 
+    def peek(self):
+        return self.top.data
+
+
 
