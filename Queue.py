@@ -8,8 +8,13 @@ class Queue:
     def is_empty(self):
         return self.front == None
 
+    def enqueu(self,item):
+        
+        new_node = Node(item)
 
-
-
-s = Queue()
-print(s.is_empty())
+        if self.rear == None:
+            self.front = new_node
+            self.rear = self.front
+        else:
+            self.front.next = new_node
+            self.rear = new_node
