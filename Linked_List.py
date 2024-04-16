@@ -15,3 +15,16 @@ class linked_list:
         self.n += 1
 
 
+    def __str__(self):
+
+        current = self.head
+        result = ''
+
+        while current != None:
+            result = result + str(current.data) + "->"
+            current = current.next
+
+        return result[:-2]
+
+
+           
