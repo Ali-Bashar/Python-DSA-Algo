@@ -23,6 +23,3 @@ def text_editor(text,pattern):
 
     return res
 
-
-x = text_editor("Hello","uuu")
-print(x)
