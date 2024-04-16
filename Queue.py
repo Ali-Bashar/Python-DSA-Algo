@@ -57,6 +57,11 @@ class Queue:
 
         return count
 
+    def rear_item(self):
+        if self.front == None:
+            return "Empty Queue"
+        else:
+            return self.rear.data
 
 
 
