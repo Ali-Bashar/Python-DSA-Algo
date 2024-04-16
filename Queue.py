@@ -28,6 +28,11 @@ class Queue:
 
 
     def peek(self):
+        if self.front == None:
+            return "Empty Queue"
+
         return self.front.data
+
+    
 
 
