@@ -7,3 +7,9 @@ class Queue:
 
     def is_empty(self):
         return self.front == None
+
+
+
+
+s = Queue()
+print(s.is_empty())
