@@ -15,5 +15,3 @@ def revers_string(text):
     return res
 
 
-x = revers_string("Hello")
-print(x)
