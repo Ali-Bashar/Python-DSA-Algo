@@ -1,5 +1,5 @@
 # This is Queue "Implementing Node"
 
-This is Queue Data Structure Using Nodes.
+This is Data Structure and Algo's in Python.
 <br>
 Author Ali Bashar AKA Xain
