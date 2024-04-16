@@ -27,4 +27,21 @@ class linked_list:
         return result[:-2]
 
 
-           
+    def append(self,value):
+
+        new_node = Node(value)
+
+        if self.head == None:
+            self.head = new_node
+            self.n += 1
+            return
+
+        curr = self.head
+
+        while curr.next != None:
+            curr = curr.next
+
+        curr.next = new_node
+        self.n += 1
+
+
