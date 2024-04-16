@@ -40,8 +40,9 @@ class Queue:
         
         temp = self.front
         while temp != None:
-            temp = temp.next
             print(temp.data,end=" ")
+            temp = temp.next
+
 
 
 
