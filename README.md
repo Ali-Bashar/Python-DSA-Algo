@@ -1,4 +1,4 @@
-# This is Queue "Implementing Node"
+# Data Strucutres And Algoithms
 
 This is Data Structure and Algo's in Python.
 <br>
