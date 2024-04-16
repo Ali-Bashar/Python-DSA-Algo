@@ -33,6 +33,17 @@ class Queue:
 
         return self.front.data
 
-    
+    def travers(self):
+
+        if self.front == None:
+            return "Empty Queue"
+        
+        temp = self.front
+        while temp != None:
+            temp = temp.next
+            print(temp.data,end=" ")
+
+
+
 
 
