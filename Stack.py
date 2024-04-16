@@ -26,4 +26,19 @@ class Stack:
             count += 1
         return count
 
+    def pop(self):
 
+        if(self.is_empty()):
+            return "Empty Stack"
+        else:
+            data = self.top.data
+            self.top = self.top.next
+            return data
+
+
+s = Stack()
+s.push(5)
+s.push(6)
+s.push(7)
+s.push(8)
+print(s.pop())
