@@ -10,5 +10,25 @@ class Stack:
     def push(self,value):
         
         new_node = Node(value)
-
+        new_node.next = self.top
         self.top = new_node
+
+    def size(self):
+
+        if self.top == None:
+            return "Empty Stack"
+        
+        temp = self.top
+        count = 0
+
+        while temp != None:
+            temp = temp.next
+            count += 1
+        return count
+
+s = Stack()
+s.push(5)
+s.push(6)
+s.push(7)
+s.push(8)
+print(s.size())
