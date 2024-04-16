@@ -45,3 +45,22 @@ class linked_list:
         self.n += 1
 
 
+    def insert_after(self,after,value):
+
+        new_node = Node(value)
+
+        curr = self.head
+
+        while curr != None:
+            if curr.data == after:
+                break
+            curr = curr.next
+
+        if curr != None:
+            new_node.next = curr.next
+            curr.next = new_node
+            self.n += 1
+        else:
+            return "Item not found"
+
+
