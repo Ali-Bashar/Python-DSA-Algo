@@ -123,10 +123,24 @@ class linked_list:
         return "Not Found"
 
 
+    def __getitem__(self,index):
+
+        curr = self.head
+        pos = 0
+
+        while curr != None:
+            if pos == index:
+                return curr.data
+            curr = curr.next
+            pos += 1
+
+        return "IndexError"
+
+
 x = linked_list()
 x.append(1)
 x.append(2)
 x.append(3)
 x.append(4)
 x.append(5)
-print(x.search(9))
+print(x[4])
