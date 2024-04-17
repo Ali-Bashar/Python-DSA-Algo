@@ -28,11 +28,10 @@ class MyList:
         self.A[self.n] = value
         self.n += 1
 
+    def __str__(self):
 
-x = MyList()
-x.append(1)
-x.append(2)
-x.append(3)
-x.append(4)
-print(len(x))
+        result = ",".join(str(self.A[i]) for i in range(self.n))
+        return f"[{result}]"
 
+
+    
