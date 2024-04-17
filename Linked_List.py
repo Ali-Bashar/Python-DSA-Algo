@@ -75,17 +75,12 @@ class linked_list:
         self.head = self.head.next
         self.n -= 1
 
-
-
     def  pop(self):
 
         if self.head == None:
             return "Empty Linked List"
 
         curr = self.head
-
-        if curr.next == None:
-            self.delet_head()
 
         while curr.next.next != None:
             curr = curr.next
