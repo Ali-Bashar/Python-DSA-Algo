@@ -88,8 +88,6 @@ class linked_list:
         curr.next = None
         self.n -= 1
 
-        self.head = self.head.next
-
 
 x = linked_list()
 x.append(1)
