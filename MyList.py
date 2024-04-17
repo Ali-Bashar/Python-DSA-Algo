@@ -21,3 +21,18 @@ class MyList:
 
         self.A = B
 
+    def append(self,value):
+        if self.size == self.n:
+            self.__resize(self.size*2)
+
+        self.A[self.n] = value
+        self.n += 1
+
+
+x = MyList()
+x.append(1)
+x.append(2)
+x.append(3)
+x.append(4)
+print(len(x))
+
