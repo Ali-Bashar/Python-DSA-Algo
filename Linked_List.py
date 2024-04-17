@@ -68,6 +68,14 @@ class linked_list:
         self.n = 0
 
 
+    def delet_head(self):
+        if self.head == None:
+            return "Empty Linked List"
+
+        self.head = self.head.next
+        self.n -= 1
+
+
 
 
 
