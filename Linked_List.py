@@ -109,11 +109,24 @@ class linked_list:
         else:
             curr.next = curr.next.next
 
+    def search(self,item):
+
+        curr = self.head
+        pos = 0
+
+        while curr != None:
+            if curr.data == item:
+                return pos
+            curr = curr.next
+            pos += 1
+
+        return "Not Found"
+
+
 x = linked_list()
 x.append(1)
 x.append(2)
 x.append(3)
 x.append(4)
 x.append(5)
-x.remove(3)
-print(x)
+print(x.search(9))
