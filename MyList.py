@@ -12,7 +12,12 @@ class MyList:
     def __len__(self):
         return self.n
 
+    def __resize(self,new_capacity):
+        B = self.__make_array(new_capacity)
+        self.size = new_capacity
 
+        for i in range(self.n):
+            B[i] = self.A[i]
 
-x = MyList()
-print(len(x))
+        self.A = B
+
