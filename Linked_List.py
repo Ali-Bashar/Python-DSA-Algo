@@ -63,4 +63,11 @@ class linked_list:
         else:
             return "Item not found"
 
+    def clear(self):
+        self.head = None
+        self.n = 0
+
+
+
+
 
