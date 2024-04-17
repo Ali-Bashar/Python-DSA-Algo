@@ -34,4 +34,5 @@ class MyList:
         return f"[{result}]"
 
 
-    
+    def pop(self):
+        pass
