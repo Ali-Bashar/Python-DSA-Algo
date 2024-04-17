@@ -77,5 +77,29 @@ class linked_list:
 
 
 
+    def  pop(self):
+
+        if self.head == None:
+            return "Empty Linked List"
+
+        curr = self.head
+
+        if curr.next == None:
+            self.delet_head()
+
+        while curr.next.next != None:
+            curr = curr.next
+
+        curr.next = None
+        self.n -= 1
+
+        self.head = self.head.next
 
 
+x = linked_list()
+x.append(1)
+x.append(2)
+x.append(3)
+x.append(4)
+x.pop()
+print(x)
