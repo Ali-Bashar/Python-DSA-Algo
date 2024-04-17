@@ -89,10 +89,33 @@ class linked_list:
         self.n -= 1
 
 
+    def remove(self, value):
+
+        if self.head == None:
+            return "Empty Linked List"
+
+        if self.head.data == value:
+            return self.delet_head()
+
+        curr = self.head
+
+        while curr.next != None:
+            if curr.data == value:
+                break
+            curr = curr.next
+
+        if curr.next == None:
+            return "Item Not Found"
+        else:
+            curr.next = curr.next.next
+
 x = linked_list()
 x.append(1)
 x.append(2)
 x.append(3)
 x.append(4)
-x.pop()
+x.append(5)
+x.remove(1)
+x.remove(2)
+x.remove(5)
 print(x)
