@@ -149,16 +149,4 @@ class linked_list:
 
         maxi.data = value
 
-
-
-
-x = linked_list()
-x.append(1)
-x.append(2)
-x.append(3)
-x.append(4)
-x.append(5)
-x.replace_max(10)
-print(x)
-
-
+    
