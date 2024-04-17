@@ -137,10 +137,28 @@ class linked_list:
         return "IndexError"
 
 
+    def replace_max(self,value):
+
+        temp = self.head
+        maxi = temp
+
+        while temp != None:
+            if temp.data > maxi.data:
+                maxi = temp
+            temp = temp.next
+
+        maxi.data = value
+
+
+
+
 x = linked_list()
 x.append(1)
 x.append(2)
 x.append(3)
 x.append(4)
 x.append(5)
-print(x[4])
+x.replace_max(10)
+print(x)
+
+
