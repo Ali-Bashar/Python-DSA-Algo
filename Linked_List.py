@@ -100,7 +100,7 @@ class linked_list:
         curr = self.head
 
         while curr.next != None:
-            if curr.data == value:
+            if curr.next.data == value:
                 break
             curr = curr.next
 
@@ -115,7 +115,5 @@ x.append(2)
 x.append(3)
 x.append(4)
 x.append(5)
-x.remove(1)
-x.remove(2)
-x.remove(5)
+x.remove(3)
 print(x)
