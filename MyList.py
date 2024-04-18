@@ -79,6 +79,14 @@ class MyList:
 
 
 
+    def __delitem__(self,pos):
+        
+        for i in range(pos,self.n-1):
+            self.A[i] = self.A[i+1]
+
+        self.n -= 1
+            
+
 
 
 x = MyList()
@@ -86,11 +94,10 @@ x.append(1)
 x.append(2.0)
 x.append("Hello")
 x.append(True)
-x.insert(3,False)
+x.append(False)
 print(x)
-
-
-
+del x[2]
+print(x)
 
 
 
