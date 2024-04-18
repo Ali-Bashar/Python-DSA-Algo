@@ -30,9 +30,23 @@ class MyList:
 
     def __str__(self):
 
-        result = ",".join(str(self.A[i]) for i in range(self.n))
-        return f"[{result}]"
+        result = ""
+        for i in range(self.n):
+            result = result + str(self.A[i]) + ","
+
+
+        return '['+result[:-1]+']' 
 
 
     def pop(self):
         pass
+
+
+x = MyList()
+x.append(1)
+x.append(2.0)
+x.append("Hello")
+x.append(True)
+print(x)
+
+    
