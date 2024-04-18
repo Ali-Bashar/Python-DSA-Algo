@@ -97,7 +97,13 @@ class MyList:
 
     def sort(self):
         
-    
+        for i in range(self.n):
+            for k in range(0,self.n-i-1):
+                if self.A[k] > self.A[k+1]:
+                    self.A[k],self.A[k+1] = self.A[k+1],self.A[k]
+
+            
+
 
 
 
