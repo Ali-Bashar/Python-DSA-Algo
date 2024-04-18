@@ -45,6 +45,15 @@ class MyList:
         raise IndexError("Item Not Found")
 
 
+    def pop(self):
+        if self.n == 0:
+            return "Empty List"
+        
+        print(self.A[self.n-1])
+        self.n = self.n - 1
+
+        
+
 
 
 x = MyList()
@@ -52,8 +61,7 @@ x.append(1)
 x.append(2.0)
 x.append("Hello")
 x.append(True)
-print(x[4])
-
+print(x)
 
 
 
