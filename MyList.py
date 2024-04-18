@@ -66,6 +66,19 @@ class MyList:
         return "Item not found"
 
 
+    def insert(self,index,item):
+
+        if self.size == self.n:
+            self.__resize(self.size*2)
+
+        for i in range(self.n,index,-1):
+            self.A[i] = self.A[i-1]
+
+        self.A[index] = item
+        self.n += 1
+
+
+
 
 
 x = MyList()
@@ -73,7 +86,8 @@ x.append(1)
 x.append(2.0)
 x.append("Hello")
 x.append(True)
-print(x.find("Pakistan"))
+x.insert(3,False)
+print(x)
 
 
 
