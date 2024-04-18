@@ -85,9 +85,7 @@ class MyList:
                 self.A[i] = self.A[i+1]
 
             self.n -= 1
-        else:
-            return IndexError("Index Out of Range")
-            
+                    
 
 
 
