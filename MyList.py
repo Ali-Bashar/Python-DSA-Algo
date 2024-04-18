@@ -38,8 +38,13 @@ class MyList:
         return '['+result[:-1]+']' 
 
 
-    def pop(self):
-        pass
+    def __getitem__(self,index):
+        if 0<= index < self.n:
+            return self.A[index]
+        else:
+            return "IndexError"
+
+
 
 
 x = MyList()
@@ -47,6 +52,11 @@ x.append(1)
 x.append(2.0)
 x.append("Hello")
 x.append(True)
-print(x)
+print(x[4])
+
+
+
+
+
 
     
