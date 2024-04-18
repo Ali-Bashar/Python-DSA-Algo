@@ -85,7 +85,14 @@ class MyList:
                 self.A[i] = self.A[i+1]
 
             self.n -= 1
-                    
+
+    def remove(self,item):
+        pos = self.find(item)
+
+        if type(pos) == int:
+            return self.__delitem__(pos)
+        else:
+            return pos            
 
 
 
@@ -95,8 +102,7 @@ x.append(2.0)
 x.append("Hello")
 x.append(True)
 x.append(False)
-print(x)
-del x[100]
+x.remove("Hello")
 print(x)
 
 
