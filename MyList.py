@@ -97,12 +97,7 @@ class MyList:
 
     def sort(self):
         
-        for i in range(self.n):
-            if type(self.A) == int:
-                if self.A[i] > self.A[i]:
-                    self.A[i] = self.A[i+1]
-            else:
-                pass 
+    
 
 
 
