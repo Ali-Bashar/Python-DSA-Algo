@@ -52,6 +52,10 @@ class MyList:
         print(self.A[self.n-1])
         self.n = self.n - 1
 
+    def clear(self):
+        self.size = 1
+        self.n = 0
+
         
 
 
@@ -61,6 +65,8 @@ x.append(1)
 x.append(2.0)
 x.append("Hello")
 x.append(True)
+print(x)
+x.clear()
 print(x)
 
 
