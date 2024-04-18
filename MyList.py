@@ -80,11 +80,13 @@ class MyList:
 
 
     def __delitem__(self,pos):
-        
-        for i in range(pos,self.n-1):
-            self.A[i] = self.A[i+1]
+        if 0<=  pos < self.n:
+            for i in range(pos,self.n-1):
+                self.A[i] = self.A[i+1]
 
-        self.n -= 1
+            self.n -= 1
+        else:
+            return IndexError("Index Out of Range")
             
 
 
@@ -96,7 +98,7 @@ x.append("Hello")
 x.append(True)
 x.append(False)
 print(x)
-del x[2]
+del x[100]
 print(x)
 
 
