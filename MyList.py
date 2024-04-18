@@ -103,17 +103,17 @@ class MyList:
                     self.A[k],self.A[k+1] = self.A[k+1],self.A[k]
 
             
+    def min(self):
 
+        for i in range(self.n):
+            B = self.A[i]
+            if self.A[i] > B[i]:
+                return B[i]
 
-
-
+        
+    
 x = MyList()
 x.append(1)
+x.append(22)
 x.append(2)
-x.append(4)
-x.append(5)
-x.append(3)
-x.sort()
-print(x)
-
-    
+print(x.min())
