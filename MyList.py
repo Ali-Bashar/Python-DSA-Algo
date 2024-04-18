@@ -57,6 +57,14 @@ class MyList:
         self.n = 0
 
         
+    def find(self,item):
+        
+        for i in range(self.n):
+            if self.A[i] == item:
+                return i
+        
+        return "Item not found"
+
 
 
 
@@ -65,9 +73,9 @@ x.append(1)
 x.append(2.0)
 x.append("Hello")
 x.append(True)
-print(x)
-x.clear()
-print(x)
+print(x.find("Pakistan"))
+
+
 
 
 
