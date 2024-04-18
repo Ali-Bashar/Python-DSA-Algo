@@ -95,17 +95,24 @@ class MyList:
             return pos            
 
 
+    def sort(self):
+        
+        for i in range(self.n):
+            if type(self.A) == int:
+                if self.A[i] > self.A[i]:
+                    self.A[i] = self.A[i+1]
+            else:
+                pass 
+
+
 
 x = MyList()
 x.append(1)
-x.append(2.0)
-x.append("Hello")
-x.append(True)
-x.append(False)
-x.remove("Hello")
+x.append(2)
+x.append(4)
+x.append(5)
+x.append(3)
+x.sort()
 print(x)
-
-
-
 
     
