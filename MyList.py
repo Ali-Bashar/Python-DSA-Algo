@@ -104,10 +104,8 @@ class MyList:
 
             
     def min(self):
-
         if self.n == 0:
-            raise ValueError("Item out of list")
-            
+            raise ValueError("Empty List")
 
         min_value = self.A[0]
 
@@ -118,15 +116,32 @@ class MyList:
         return min_value
 
 
-        
+    def sum(self):
+
+        if self.n == 0:
+            raise ValueError("List Empty")
+
+        data = self.A[0]
+
+        for i in range(1,self.n):
+            data += self.A[i]
+
+
+        return data
+
+            
 
 
 x = MyList()
-x.append(1)
+x.append(5)
 x.append(2)
-x.append(3)
-x.append(4)
 x.append(6)
-x.append(100)
-x.append(0)
-print(x.min())
+x.append(4)
+x.append(7)
+x.append(6)
+print(x.sum())
+
+
+        
+
+
