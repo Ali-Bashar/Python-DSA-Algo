@@ -130,16 +130,24 @@ class MyList:
         return data
 
             
+    def extend(self,extension_value):
+
+        if extension_value is None:
+            raise ValueError("extension value can not be None")
+
+        new_size = self.n + extension_value
+
+        if new_size > self.size:
+            self.__resize(new_size)
+
+        for i in range(new_capacity):
+            self.append(extension_value)
 
 
-x = MyList()
-x.append(5)
-x.append(2)
-x.append(6)
-x.append(4)
-x.append(7)
-x.append(6)
-print(x.sum())
+
+
+
+
 
 
         
