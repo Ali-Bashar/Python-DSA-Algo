@@ -149,10 +149,16 @@ class MyList:
         if self.n == 0:
             raise ValueError("Empty List")
 
-        pos = self.__getitem__(index)
+        pos = index
 
-        for i in range(self.n):
-            pass
+        for i in range(-1,self.n):
+
+            if self.A[i] == pos:
+                index = self.A[pos]
+
+            return  index
+            
+        
 
              
 
