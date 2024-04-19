@@ -106,14 +106,20 @@ class MyList:
     def min(self):
 
         for i in range(self.n):
-            B = self.A[i]
-            if self.A[i] > B[i]:
-                return B[i]
+            for j in range(i,self.n-i):
+                if self.A[i] > self.A[j]:
+                    min = self.A[j]
 
+        return min
         
-    
+
+
 x = MyList()
 x.append(1)
-x.append(22)
 x.append(2)
+x.append(3)
+x.append(4)
+x.append(6)
+x.append(100)
+x.append(0)
 print(x.min())
