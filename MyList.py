@@ -105,12 +105,19 @@ class MyList:
             
     def min(self):
 
-        for i in range(self.n):
-            for j in range(i,self.n-i):
-                if self.A[i] > self.A[j]:
-                    min = self.A[j]
+        if self.n == 0:
+            raise ValueError("Item out of list")
+            
 
-        return min
+        min_value = self.A[0]
+
+        for i in range(1,self.n):
+            if self.A[i] < min_value:
+                min_value = self.A[i]
+
+        return min_value
+
+
         
 
 
