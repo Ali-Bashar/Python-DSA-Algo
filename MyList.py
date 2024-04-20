@@ -39,13 +39,27 @@ class MyList:
 
 
     def __getitem__(self,index):
-        if index < 0:
-            index = self.n + index
+        if isinstance(index,slice):
+            start, stop, step = index.start, index.stop, index.step
+            if index.start == None:
+                start = 0
+            if index.stop == None:
+                stop = self.n
+            if index.step == None:
+                step = 1
 
-        if 0<= index < self.n:
-            return self.A[index]
+            result = MyList()
+            for i in range(start,stop,step):
+                result.append(self.A[i])
+            return result
+        else:
+            if index < 0:
+                index = self.n + index
+
+            if 0<= index < self.n:
+                return self.A[index]
         
-        raise IndexError("Item Not Found")
+            raise IndexError("Item Not Found")
 
 
     def pop(self):
@@ -156,6 +170,8 @@ class MyList:
 
         return str(self)
 
+    
+
 
 
     
@@ -173,14 +189,9 @@ x.append(1)
 x.append(2)
 x.append(3)
 x.append(4)
-
-y = MyList()
-y.append(5) 
-y.append(6)
-y.append(7)
-y.append(8)
-
-print(x.merg_array(y))
+x.append(5)
+x.append(6)
+print(x[1:4:2])
 
         
 
