@@ -184,14 +184,7 @@ class MyList:
 
 
 
-x = MyList()
-x.append(1)
-x.append(2)
-x.append(3)
-x.append(4)
-x.append(5)
-x.append(6)
-print(x[1:4:2])
+
 
         
 
