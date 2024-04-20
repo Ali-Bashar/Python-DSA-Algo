@@ -39,6 +39,9 @@ class MyList:
 
 
     def __getitem__(self,index):
+        if index < 0:
+            index = self.n + index
+
         if 0<= index < self.n:
             return self.A[index]
         
@@ -144,19 +147,9 @@ class MyList:
             self.append(extension_value)
 
 
-    def negative_index(self,index):
+    
+
         
-        if self.n == 0:
-            raise ValueError("Empty List")
-
-        pos = index
-
-        for i in range(-1,self.n):
-
-            if self.A[i] == pos:
-                index = self.A[pos]
-
-            return  index
             
         
 
@@ -169,7 +162,7 @@ x.append(1)
 x.append(2)
 x.append(3)
 x.append(4)
-print(x.negative_index(-1))
+print(x[-1])
                 
         
 
