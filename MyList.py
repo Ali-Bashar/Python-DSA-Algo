@@ -147,6 +147,17 @@ class MyList:
             self.append(extension_value)
 
 
+    def merg_array(self,new_array):
+        if self.n == 0:
+            raise ValueError("Array do not exist")
+
+        for item in new_array:
+            self.append(item)
+
+        return str(self)
+
+
+
     
 
         
@@ -162,8 +173,15 @@ x.append(1)
 x.append(2)
 x.append(3)
 x.append(4)
-print(x[-1])
-                
+
+y = MyList()
+y.append(5) 
+y.append(6)
+y.append(7)
+y.append(8)
+
+print(x.merg_array(y))
+
         
 
 
